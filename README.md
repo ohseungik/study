@@ -24,7 +24,7 @@ w
 | 13~16주 | AI × Frontend 융합 | LLM Playground |
 | 17~20주 | 비즈니스 임팩트 | A/B Test Dashboard |
 | 21~24주 | 통합 & 포트폴리오 | 완성형 SaaS급 프로젝트 |s
-
+s
 ---
 
 ## 📍 1~4주차: React & Next.js 심화 (Core Deep Dive)
@@ -183,7 +183,7 @@ AI API를 활용해 대화형 UX를 설계하고, LLM 기반 Playground 개발
 ---
 
 ## 📚 참고 자료
-s
+
 - [React Docs (v19 Canary)](https://react.dev/)
 - [Next.js Official Docs](https://nextjs.org/docs)
 - [TanStack Query](https://tanstack.com/query/latest)
