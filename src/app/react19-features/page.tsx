@@ -21,7 +21,7 @@ export default function React19FeaturesPage() {
       title: "Actions",
       description: "Server Actions와 Form Actions으로 간편한 상태 관리",
       href: "/react19-features/actions",
-      status: "준비중",
+      status: "완료",
       highlights: ["Server Actions", "Form Actions", "Optimistic Updates"],
     },
     {
