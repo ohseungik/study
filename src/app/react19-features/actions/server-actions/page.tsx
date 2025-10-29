@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 /**
  * Server Actions 예제 - 서버에서 실행되는 Actions
  */
