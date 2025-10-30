@@ -42,7 +42,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-              <span>Server Components 예제 (준비중)</span>
+              <span>Server Components 예제 (완료)</span>
             </div>
           </div>
           
@@ -142,9 +142,9 @@ export default function Home() {
             <span>Server Components 예제</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full w-0"></div>
+                <div className="bg-green-600 h-2 rounded-full w-full"></div>
               </div>
-              <span className="text-sm text-gray-500 font-medium">0%</span>
+              <span className="text-sm text-green-600 font-medium">100%</span>
             </div>
           </div>
         </div>

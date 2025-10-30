@@ -28,7 +28,7 @@ export default function React19FeaturesPage() {
       title: "Server Components",
       description: "서버에서 렌더링되는 컴포넌트와 성능 최적화",
       href: "/react19-features/server-components",
-      status: "준비중",
+      status: "완료",
       highlights: ["SSR 최적화", "Streaming", "Client vs Server"],
     },
   ];
