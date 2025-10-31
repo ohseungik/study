@@ -41,8 +41,41 @@ export default function Home() {
               <span>Actions 예제 (완료)</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
               <span>Server Components 예제 (완료)</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-blue-600 group-hover:text-blue-800">
+            시작하기 →
+          </div>
+        </Link>
+
+        <Link
+          href="/fiber"
+          className="group p-8 bg-white border-2 border-blue-200 rounded-lg hover:border-blue-500 hover:shadow-xl transition-all"
+        >
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-blue-600">
+              🧵 Fiber & 렌더링 파이프라인
+            </h2>
+            <p className="text-gray-600 mt-2">
+              React의 핵심 엔진 Fiber 구조와 렌더링 과정 시각화
+            </p>
+          </div>
+          
+          <div className="space-y-2 text-sm text-gray-700">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Fiber 트리 구조 시각화 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>렌더링 파이프라인 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+              <span>Work Loop 동작 (준비중)</span>
             </div>
           </div>
           
