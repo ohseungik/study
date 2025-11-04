@@ -119,7 +119,7 @@ export default function WorkLoopVisualization() {
                     width: 160,
                     fontSize: '13px',
                     fontWeight: isCurrent ? 'bold' : 'normal',
-                    textAlign: 'center',
+                    textAlign: 'center' as const,
                 },
             };
         }),
