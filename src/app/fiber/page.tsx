@@ -20,7 +20,7 @@ export default function FiberPage() {
             title: 'Work Loop 동작',
             description: 'Fiber Work Loop의 동작 원리와 인터럽트 가능한 렌더링',
             href: '/fiber/work-loop',
-            status: '준비중',
+            status: '완료',
             highlights: ['Time Slicing', 'Concurrent Mode', 'Interruptible Rendering'],
         },
     ];
