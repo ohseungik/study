@@ -53,10 +53,10 @@ export default function Home() {
 
         <Link
           href="/fiber"
-          className="group p-8 bg-white border-2 border-blue-200 rounded-lg hover:border-blue-500 hover:shadow-xl transition-all"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-lg transition-all"
         >
           <div className="mb-4">
-            <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-blue-600">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors">
               🧵 Fiber & 렌더링 파이프라인
             </h2>
             <p className="text-gray-600 mt-2">
@@ -64,7 +64,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="space-y-2 text-sm text-gray-700">
+          <div className="space-y-2 text-sm">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-500 rounded-full"></span>
               <span>Fiber 트리 구조 시각화 (완료)</span>
@@ -74,8 +74,41 @@ export default function Home() {
               <span>렌더링 파이프라인 (완료)</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-              <span>Work Loop 동작 (준비중)</span>
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Work Loop 동작 (완료)</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-blue-600 group-hover:text-blue-800">
+            시작하기 →
+          </div>
+        </Link>
+
+        <Link
+          href="/app-router"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-lg transition-all"
+        >
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors">
+              🚀 Next.js App Router
+            </h2>
+            <p className="text-gray-600 mt-2">
+              App Router의 핵심 기능과 패턴 마스터하기
+            </p>
+          </div>
+          
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Server/Client Components (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Streaming & Suspense (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Data Fetching & Server Actions (완료)</span>
             </div>
           </div>
           
@@ -152,7 +185,7 @@ export default function Home() {
         <h3 className="text-xl font-semibold mb-4">📈 현재 진행 상황</h3>
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <span>React 19 use() Hook 예제</span>
+            <span>React 19 Features (3개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>
@@ -162,7 +195,7 @@ export default function Home() {
           </div>
           
           <div className="flex items-center justify-between">
-            <span>React 19 Actions 예제</span>
+            <span>Fiber 구조 & 렌더링 (3개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>
@@ -172,7 +205,7 @@ export default function Home() {
           </div>
           
           <div className="flex items-center justify-between">
-            <span>Server Components 예제</span>
+            <span>Next.js App Router (6개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>

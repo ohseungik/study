@@ -218,4 +218,6 @@ AI API를 활용해 대화형 UX를 설계하고, LLM 기반 Playground 개발
 
 ## Sample 순서
 
-- [1주차 예제](https://study-5tn.pages.dev/react19-features)
+- [1주차 예제: React 19 Features](https://study-5tn.pages.dev/react19-features)
+- [1주차 예제: Fiber 구조 및 렌더링](https://study-5tn.pages.dev/fiber)
+- [1주차 예제: Next.js App Router](https://study-5tn.pages.dev/app-router)
