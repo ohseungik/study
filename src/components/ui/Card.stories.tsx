@@ -158,7 +158,7 @@ export const ComplexContent: Story = {
 /**
  * 그리드 레이아웃 예제
  */
-export const GridLayout: Story = {
+export const GridLayout = {
   render: () => (
     <div className="grid grid-cols-2 gap-4 w-[600px]">
       <Card title="통계 #1" variant="primary">

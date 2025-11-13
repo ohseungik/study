@@ -121,59 +121,62 @@ export const Number: Story = {
 /**
  * 인터랙티브 예제 - 실시간 값 변경
  */
-export const Interactive: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    return (
-      <div className="w-80">
-        <Input
-          label="실시간 입력"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder="입력해보세요"
-        />
-        <p className="mt-2 text-sm text-gray-600">
-          입력한 값: <strong>{value || '(없음)'}</strong>
-        </p>
-      </div>
-    );
-  },
+const InteractiveComponent = () => {
+  const [value, setValue] = useState('');
+  return (
+    <div className="w-80">
+      <Input
+        label="실시간 입력"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="입력해보세요"
+      />
+      <p className="mt-2 text-sm text-gray-600">
+        입력한 값: <strong>{value || '(없음)'}</strong>
+      </p>
+    </div>
+  );
 };
 
+export const Interactive: Story = {
+  render: () => <InteractiveComponent />,
+}
 /**
  * 폼 예제
  */
+const FormExampleComponent = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+  
+  return (
+    <div className="w-96 space-y-4">
+      <Input
+        label="이름"
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        placeholder="홍길동"
+      />
+      <Input
+        type="email"
+        label="이메일"
+        value={formData.email}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+        placeholder="email@example.com"
+      />
+      <Input
+        type="password"
+        label="비밀번호"
+        value={formData.password}
+        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+        placeholder="8자 이상"
+      />
+    </div>
+  );
+};
+
 export const FormExample: Story = {
-  render: () => {
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      password: '',
-    });
-    
-    return (
-      <div className="w-96 space-y-4">
-        <Input
-          label="이름"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          placeholder="홍길동"
-        />
-        <Input
-          type="email"
-          label="이메일"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          placeholder="email@example.com"
-        />
-        <Input
-          type="password"
-          label="비밀번호"
-          value={formData.password}
-          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-          placeholder="8자 이상"
-        />
-      </div>
-    );
-  },
+  render: () => <FormExampleComponent />,
 };
