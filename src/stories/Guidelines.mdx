@@ -1,0 +1,240 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Guidelines" />
+
+# 컴포넌트 사용 가이드라인
+
+이 문서는 디자인 시스템의 컴포넌트를 올바르게 사용하는 방법을 안내합니다.
+
+## 일반 원칙
+
+### Props 네이밍
+
+모든 컴포넌트는 일관된 props 네이밍 규칙을 따릅니다:
+
+- `variant`: 시각적 스타일 변형
+- `size`: 컴포넌트 크기
+- `disabled`: 비활성화 상태
+- `onClick`, `onChange`: 이벤트 핸들러
+
+### TypeScript 사용
+
+모든 컴포넌트는 완전한 TypeScript 타입 정의를 제공합니다:
+
+```tsx
+import type { ButtonProps } from '@/components/ui/Button';
+
+const props: ButtonProps = {
+  variant: 'primary',
+  size: 'medium',
+  onClick: () => console.log('clicked'),
+};
+```
+
+## 컴포넌트별 가이드라인
+
+### Button
+
+#### ✅ 올바른 사용
+
+```tsx
+// 명확한 액션을 나타내는 텍스트
+<Button variant="primary">저장하기</Button>
+
+// 위험한 작업은 danger variant 사용
+<Button variant="danger">삭제</Button>
+
+// 비활성 상태 명시
+<Button disabled>로딩 중...</Button>
+```
+
+#### ❌ 잘못된 사용
+
+```tsx
+// 모호한 텍스트
+<Button>확인</Button>
+
+// 일반 작업에 danger variant 사용
+<Button variant="danger">다음</Button>
+```
+
+### Input
+
+#### ✅ 올바른 사용
+
+```tsx
+// 명확한 라벨과 placeholder
+<Input 
+  label="이메일"
+  type="email"
+  placeholder="example@email.com"
+/>
+
+// 에러 메시지 표시
+<Input 
+  label="비밀번호"
+  type="password"
+  error="8자 이상 입력해주세요"
+/>
+```
+
+#### ❌ 잘못된 사용
+
+```tsx
+// 라벨 없이 사용
+<Input placeholder="뭔가 입력하세요" />
+
+// 부적절한 type 사용
+<Input type="text" label="나이" />  // type="number" 사용해야 함
+```
+
+### Card
+
+#### ✅ 올바른 사용
+
+```tsx
+// 명확한 제목과 구조화된 컨텐츠
+<Card title="사용자 정보">
+  <div className="space-y-2">
+    <p>이름: 홍길동</p>
+    <p>이메일: hong@example.com</p>
+  </div>
+</Card>
+
+// 액션이 있는 경우 footer 사용
+<Card 
+  title="알림"
+  footer={<Button>확인</Button>}
+>
+  <p>새로운 메시지가 도착했습니다.</p>
+</Card>
+```
+
+#### ❌ 잘못된 사용
+
+```tsx
+// 제목 없이 복잡한 컨텐츠
+<Card>
+  <h3>제목</h3>  {/* title prop 사용해야 함 */}
+  <p>내용...</p>
+</Card>
+```
+
+## 접근성 가이드라인
+
+### 키보드 네비게이션
+
+모든 인터랙티브 요소는 키보드로 접근 가능해야 합니다:
+
+```tsx
+// Button은 기본적으로 포커스 가능
+<Button onClick={handleClick}>클릭</Button>
+
+// Input도 자동으로 포커스 가능
+<Input label="이름" />
+```
+
+### 색상 대비
+
+텍스트와 배경의 색상 대비는 WCAG AA 기준을 충족합니다:
+
+- **Primary**: 파란색 배경 + 흰색 텍스트 (대비율 4.5:1 이상)
+- **Danger**: 빨간색 배경 + 흰색 텍스트 (대비율 4.5:1 이상)
+
+### 에러 메시지
+
+에러는 색상뿐만 아니라 텍스트로도 전달되어야 합니다:
+
+```tsx
+// ✅ 올바른 에러 표시
+<Input 
+  label="이메일"
+  error="올바른 이메일 형식이 아닙니다"
+  // 빨간색 테두리 + 에러 메시지 텍스트
+/>
+
+// ❌ 색상만으로 에러 표시
+<Input style={{ borderColor: 'red' }} />
+```
+
+## 성능 최적화
+
+### 메모이제이션
+
+불필요한 리렌더링을 방지하기 위해 `React.memo` 사용:
+
+```tsx
+import { memo } from 'react';
+import { Button } from '@/components/ui/Button';
+
+const MemoizedButton = memo(Button);
+
+// 부모가 리렌더링되어도 props가 같으면 리렌더링 안 함
+<MemoizedButton variant="primary">저장</MemoizedButton>
+```
+
+### 이벤트 핸들러
+
+인라인 함수 대신 useCallback 사용:
+
+```tsx
+const handleClick = useCallback(() => {
+  console.log('clicked');
+}, []);
+
+<Button onClick={handleClick}>클릭</Button>
+```
+
+## 스타일 커스터마이징
+
+### className 사용
+
+추가 스타일이 필요한 경우 `className` prop 사용:
+
+```tsx
+<Button className="mt-4 w-full">
+  전체 너비 버튼
+</Button>
+
+<Card className="max-w-md mx-auto">
+  중앙 정렬 카드
+</Card>
+```
+
+### Tailwind 유틸리티
+
+컴포넌트는 Tailwind CSS 유틸리티와 함께 사용할 수 있습니다:
+
+```tsx
+<div className="flex gap-2">
+  <Button>취소</Button>
+  <Button variant="primary">확인</Button>
+</div>
+```
+
+## 테스트
+
+### Storybook 활용
+
+각 컴포넌트의 Storybook 스토리를 통해:
+
+1. **Controls 탭**: Props를 실시간으로 변경하여 테스트
+2. **Docs 탭**: 자동 생성된 문서 확인
+3. **Accessibility 탭**: 접근성 이슈 확인
+
+### 인터랙션 테스트
+
+Story에서 제공하는 인터랙티브 예제로 실제 동작 테스트:
+
+```tsx
+// Input의 Interactive Story
+- 텍스트 입력 시 실시간 반영 확인
+- 에러 상태 동작 테스트
+- 비활성화 상태 확인
+```
+
+## 추가 리소스
+
+- [Tailwind CSS 문서](https://tailwindcss.com)
+- [React 공식 문서](https://react.dev)
+- [WCAG 가이드라인](https://www.w3.org/WAI/WCAG21/quickref/)

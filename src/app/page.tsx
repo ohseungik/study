@@ -117,26 +117,71 @@ export default function Home() {
           </div>
         </Link>
 
-        <div className="p-8 bg-gray-50 border-2 border-gray-200 rounded-lg">
+        <Link
+          href="/storybook-guide"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-lg transition-all"
+        >
           <div className="mb-4">
-            <h2 className="text-2xl font-semibold text-gray-400">
-              🎨 Design System
+            <h2 className="text-2xl font-semibold group-hover:text-blue-600 transition-colors">
+              📚 Storybook 가이드
             </h2>
-            <p className="text-gray-500 mt-2">
-              Storybook + Token System (5~8주차)
+            <p className="text-gray-600 mt-2">
+              컴포넌트 문서화의 모든 것: CSF 3.0, Controls, MDX, Auto-Docs
             </p>
           </div>
           
-          <div className="space-y-2 text-sm text-gray-500">
-            <div>• Figma Token 연동</div>
-            <div>• CLI 자동 생성기</div>
-            <div>• 모노레포 구조</div>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>기초 & CSF 3.0 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Controls & MDX (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Addons & Design Tokens (완료)</span>
+            </div>
           </div>
           
-          <div className="mt-6 text-gray-400">
-            Coming Soon...
+          <div className="mt-6 text-blue-600 group-hover:text-blue-800">
+            가이드 보기 →
           </div>
-        </div>
+        </Link>
+
+        <Link
+          href="/storybook-demo"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-purple-500 hover:shadow-lg transition-all"
+        >
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold group-hover:text-purple-600 transition-colors">
+              🎨 Storybook 데모
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Button, Input, Card 컴포넌트 라이브 데모
+            </p>
+          </div>
+          
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>인터랙티브 Button 데모 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Form Input 검증 예제 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Card 레이아웃 예제 (완료)</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-purple-600 group-hover:text-purple-800">
+            데모 보기 →
+          </div>
+        </Link>
 
         <div className="p-8 bg-gray-50 border-2 border-gray-200 rounded-lg">
           <div className="mb-4">
@@ -206,6 +251,16 @@ export default function Home() {
           
           <div className="flex items-center justify-between">
             <span>Next.js App Router (6개 예제)</span>
+            <div className="flex items-center gap-2">
+              <div className="w-24 bg-gray-200 rounded-full h-2">
+                <div className="bg-green-600 h-2 rounded-full w-full"></div>
+              </div>
+              <span className="text-sm text-green-600 font-medium">100%</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between">
+            <span>Storybook 가이드 (6개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>

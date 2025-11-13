@@ -1,0 +1,272 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design Tokens" />
+
+# 디자인 토큰
+
+디자인 토큰은 디자인 시스템의 시각적 속성을 정의하는 변수들입니다.
+
+## 색상 (Colors)
+
+### Primary Colors
+
+우리 브랜드의 주요 색상입니다.
+
+<div style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#2563eb', borderRadius: '8px' }}></div>
+    <p><strong>Blue 600</strong></p>
+    <code>#2563eb</code>
+  </div>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#1d4ed8', borderRadius: '8px' }}></div>
+    <p><strong>Blue 700</strong></p>
+    <code>#1d4ed8</code>
+  </div>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#eff6ff', border: '1px solid #ddd', borderRadius: '8px' }}></div>
+    <p><strong>Blue 50</strong></p>
+    <code>#eff6ff</code>
+  </div>
+</div>
+
+### Secondary Colors
+
+보조 색상입니다.
+
+<div style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#4b5563', borderRadius: '8px' }}></div>
+    <p><strong>Gray 600</strong></p>
+    <code>#4b5563</code>
+  </div>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#374151', borderRadius: '8px' }}></div>
+    <p><strong>Gray 700</strong></p>
+    <code>#374151</code>
+  </div>
+</div>
+
+### Semantic Colors
+
+의미를 전달하는 색상입니다.
+
+<div style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#dc2626', borderRadius: '8px' }}></div>
+    <p><strong>Danger</strong></p>
+    <code>#dc2626</code>
+  </div>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#16a34a', borderRadius: '8px' }}></div>
+    <p><strong>Success</strong></p>
+    <code>#16a34a</code>
+  </div>
+  <div>
+    <div style={{ width: '100px', height: '100px', backgroundColor: '#ca8a04', borderRadius: '8px' }}></div>
+    <p><strong>Warning</strong></p>
+    <code>#ca8a04</code>
+  </div>
+</div>
+
+## 타이포그래피 (Typography)
+
+### Font Sizes
+
+| 토큰 | 크기 | 사용처 |
+|------|------|--------|
+| `text-sm` | 14px | Small 버튼, 보조 텍스트 |
+| `text-base` | 16px | Medium 버튼, 본문 텍스트 |
+| `text-lg` | 18px | Large 버튼, 부제목 |
+| `text-xl` | 20px | 카드 제목 |
+| `text-2xl` | 24px | 섹션 제목 |
+| `text-3xl` | 30px | 페이지 제목 |
+
+### Font Weights
+
+| 토큰 | 값 | 사용처 |
+|------|------|--------|
+| `font-normal` | 400 | 본문 텍스트 |
+| `font-medium` | 500 | 라벨, 부제목 |
+| `font-semibold` | 600 | 버튼, 강조 텍스트 |
+| `font-bold` | 700 | 제목 |
+
+### Line Heights
+
+| 토큰 | 값 |
+|------|------|
+| `leading-tight` | 1.25 |
+| `leading-normal` | 1.5 |
+| `leading-relaxed` | 1.625 |
+
+## 간격 (Spacing)
+
+Tailwind의 spacing scale을 따릅니다 (1 unit = 4px):
+
+| 토큰 | 픽셀 | 사용 예시 |
+|------|------|----------|
+| `1` | 4px | 아이콘과 텍스트 사이 |
+| `2` | 8px | 버튼 내부 작은 간격 |
+| `3` | 12px | 버튼 padding (small) |
+| `4` | 16px | 버튼 padding (medium), 요소 간 기본 간격 |
+| `6` | 24px | 버튼 padding (large), 카드 내부 padding |
+| `8` | 32px | 섹션 간 간격 |
+| `12` | 48px | 큰 섹션 간 간격 |
+
+## 테두리 (Border)
+
+### Border Radius
+
+| 토큰 | 값 | 사용처 |
+|------|------|--------|
+| `rounded` | 4px | - |
+| `rounded-md` | 6px | - |
+| `rounded-lg` | 8px | 버튼, Input, Card |
+| `rounded-xl` | 12px | - |
+| `rounded-full` | 9999px | 원형 버튼 |
+
+### Border Width
+
+| 토큰 | 값 | 사용처 |
+|------|------|--------|
+| `border` | 1px | 기본 테두리 |
+| `border-2` | 2px | Outline 버튼 |
+
+### Border Colors
+
+| 토큰 | 색상 | 사용처 |
+|------|------|--------|
+| `border-gray-200` | #e5e7eb | 기본 테두리 |
+| `border-gray-300` | #d1d5db | Input 기본 테두리 |
+| `border-blue-200` | #bfdbfe | Primary 테두리 |
+| `border-blue-500` | #3b82f6 | Input 포커스 |
+| `border-blue-600` | #2563eb | Outline 버튼 |
+| `border-red-500` | #ef4444 | 에러 상태 |
+
+## 그림자 (Shadow)
+
+| 토큰 | 값 | 사용처 |
+|------|------|--------|
+| `shadow-sm` | 0 1px 2px rgba(0,0,0,0.05) | Card 기본 |
+| `shadow` | 0 1px 3px rgba(0,0,0,0.1) | - |
+| `shadow-md` | 0 4px 6px rgba(0,0,0,0.1) | Card 호버 |
+| `shadow-lg` | 0 10px 15px rgba(0,0,0,0.1) | Modal, Dropdown |
+
+## 전환 효과 (Transitions)
+
+모든 인터랙티브 요소는 부드러운 전환 효과를 사용합니다:
+
+```css
+transition-colors: color, background-color, border-color
+transition-all: all properties
+duration: 150ms
+timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+```
+
+사용 예시:
+
+```tsx
+className="transition-colors hover:bg-blue-700"
+className="transition-all hover:scale-105"
+```
+
+## 컴포넌트별 토큰 사용
+
+### Button
+
+```tsx
+// Small Button
+padding: px-3 py-1.5    // 12px 6px
+font-size: text-sm      // 14px
+
+// Medium Button
+padding: px-4 py-2      // 16px 8px
+font-size: text-base    // 16px
+
+// Large Button
+padding: px-6 py-3      // 24px 12px
+font-size: text-lg      // 18px
+```
+
+### Input
+
+```tsx
+// 기본 스타일
+padding: px-4 py-2          // 16px 8px
+border: border              // 1px
+border-color: border-gray-300
+focus-border: border-blue-500
+border-radius: rounded-lg   // 8px
+```
+
+### Card
+
+```tsx
+// 기본 스타일
+padding: px-6 py-4          // 24px 16px
+border-radius: rounded-lg   // 8px
+shadow: shadow-sm
+hover-shadow: shadow-md (hoverable일 때)
+```
+
+## Tailwind 설정
+
+이 토큰들은 `tailwind.config.ts`에서 확장 가능합니다:
+
+```ts
+// tailwind.config.ts
+export default {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          primary: '#2563eb',
+          secondary: '#4b5563',
+        },
+      },
+      spacing: {
+        '128': '32rem',
+      },
+    },
+  },
+};
+```
+
+## 토큰 사용 예시
+
+### CSS 클래스로 직접 사용
+
+```tsx
+<div className="bg-blue-600 text-white px-4 py-2 rounded-lg">
+  Primary 스타일
+</div>
+```
+
+### 컴포넌트 내부에서 사용
+
+```tsx
+const variantClasses = {
+  primary: 'bg-blue-600 text-white hover:bg-blue-700',
+  secondary: 'bg-gray-600 text-white hover:bg-gray-700',
+};
+```
+
+### 조건부 스타일
+
+```tsx
+className={`
+  px-4 py-2 rounded-lg
+  ${variant === 'primary' ? 'bg-blue-600' : 'bg-gray-600'}
+  ${disabled ? 'opacity-50' : 'opacity-100'}
+`}
+```
+
+## 다크 모드 지원
+
+향후 다크 모드 추가 시 사용할 토큰:
+
+```tsx
+className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+```
+
+현재는 라이트 모드만 지원하지만, 모든 컴포넌트는 다크 모드를 쉽게 추가할 수 있도록 설계되었습니다.
