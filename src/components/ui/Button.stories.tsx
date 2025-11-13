@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import { Button } from './Button';
 
 /**
@@ -44,9 +43,6 @@ const meta = {
       control: 'text',
       description: '버튼에 표시될 텍스트',
     },
-  },
-  args: {
-    onClick: fn(),
   },
 } satisfies Meta<typeof Button>;
 
