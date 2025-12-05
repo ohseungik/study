@@ -220,20 +220,57 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link
+          href="/react-query-suspense"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-indigo-500 hover:shadow-lg transition-all"
+        >
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold group-hover:text-indigo-600 transition-colors">
+              🔄 React Query + Suspense
+            </h2>
+            <p className="text-gray-600 mt-2">
+              선언적 데이터 페칭과 캐싱 전략
+            </p>
+          </div>
+          
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>useSuspenseQuery 사용법 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>병렬 데이터 로딩 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>중첩 Suspense 패턴 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>캐싱 전략 가이드 (완료)</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-indigo-600 group-hover:text-indigo-800">
+            시작하기 →
+          </div>
+        </Link>
+
         <div className="p-8 bg-gray-50 border-2 border-gray-200 rounded-lg">
           <div className="mb-4">
             <h2 className="text-2xl font-semibold text-gray-400">
-              🏗️ 아키텍처
+              🏗️ GraphQL 아키텍처
             </h2>
             <p className="text-gray-500 mt-2">
-              GraphQL + React Query (9~12주차)
+              GraphQL + Codegen (9~12주차)
             </p>
           </div>
           
           <div className="space-y-2 text-sm text-gray-500">
-            <div>• 캐싱 최적화</div>
-            <div>• 성능 분석</div>
-            <div>• 데이터 패칭 패턴</div>
+            <div>• GraphQL 스키마 설계</div>
+            <div>• Codegen 자동화</div>
+            <div>• 성능 최적화</div>
           </div>
           
           <div className="mt-6 text-gray-400">
@@ -308,6 +345,16 @@ export default function Home() {
           
           <div className="flex items-center justify-between">
             <span>상태 관리 라이브러리 비교 (4개 예제)</span>
+            <div className="flex items-center gap-2">
+              <div className="w-24 bg-gray-200 rounded-full h-2">
+                <div className="bg-green-600 h-2 rounded-full w-full"></div>
+              </div>
+              <span className="text-sm text-green-600 font-medium">100%</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between">
+            <span>React Query + Suspense 통합 (1개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>
