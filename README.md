@@ -208,6 +208,25 @@ AI API를 활용해 대화형 UX를 설계하고, LLM 기반 Playground 개발
   - Storybook Stories 작성
   - 인터랙티브 라이브 데모 페이지
 
+- ✅ **상태 관리 라이브러리 비교** (4개 예제)
+  - Zustand: Provider-free 상태 관리
+  - Recoil: Atom/Selector 패턴
+  - Jotai: 원시 Atom 방식
+  - 상세 코드 비교 페이지
+
+- ✅ **React Query + Suspense** (1개 예제)
+  - useSuspenseQuery 사용법
+  - 병렬/중첩 데이터 로딩
+  - 캐싱 전략 (staleTime, gcTime)
+  - ErrorBoundary 통합
+
+- ✅ **GraphQL + Codegen** (1개 예제)
+  - GraphQL Schema 설계
+  - Apollo Client 캐싱 전략
+  - Codegen으로 타입 자동 생성
+  - 정규화 & 최적화
+  - 캐싱 전략 시뮬레이터
+
 ### 진행 중
 - 🔄 Design Token System 구축
 - 🔄 CLI Component Generator
