@@ -294,20 +294,57 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link
+          href="/performance-analysis"
+          className="group p-8 bg-white border-2 border-gray-200 rounded-lg hover:border-cyan-500 hover:shadow-lg transition-all"
+        >
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold group-hover:text-cyan-600 transition-colors">
+              📊 성능 분석
+            </h2>
+            <p className="text-gray-600 mt-2">
+              Lighthouse, Web Vitals, Bundle Analyzer
+            </p>
+          </div>
+          
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Web Vitals 모니터링 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Lighthouse 점수 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>Bundle Size 분석 (완료)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              <span>최적화 체크리스트 (완료)</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-cyan-600 group-hover:text-cyan-800">
+            시작하기 →
+          </div>
+        </Link>
+
         <div className="p-8 bg-gray-50 border-2 border-gray-200 rounded-lg">
           <div className="mb-4">
             <h2 className="text-2xl font-semibold text-gray-400">
-              📊 성능 분석
+              🤖 AI 통합
             </h2>
             <p className="text-gray-500 mt-2">
-              Lighthouse & Web Vitals (9~12주차)
+              LLM Playground (13~16주차)
             </p>
           </div>
           
           <div className="space-y-2 text-sm text-gray-500">
-            <div>• 성능 측정 자동화</div>
-            <div>• Bundle Analyzer</div>
-            <div>• 최적화 대시보드</div>
+            <div>• OpenAI API 연동</div>
+            <div>• Prompt 최적화</div>
+            <div>• Stream UI 구현</div>
           </div>
           
           <div className="mt-6 text-gray-400">
@@ -402,6 +439,16 @@ export default function Home() {
           
           <div className="flex items-center justify-between">
             <span>GraphQL + Codegen + 캐싱 (1개 예제)</span>
+            <div className="flex items-center gap-2">
+              <div className="w-24 bg-gray-200 rounded-full h-2">
+                <div className="bg-green-600 h-2 rounded-full w-full"></div>
+              </div>
+              <span className="text-sm text-green-600 font-medium">100%</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between">
+            <span>성능 분석 & 최적화 (1개 예제)</span>
             <div className="flex items-center gap-2">
               <div className="w-24 bg-gray-200 rounded-full h-2">
                 <div className="bg-green-600 h-2 rounded-full w-full"></div>

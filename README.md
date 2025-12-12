@@ -227,6 +227,13 @@ AI API를 활용해 대화형 UX를 설계하고, LLM 기반 Playground 개발
   - 정규화 & 최적화
   - 캐싱 전략 시뮬레이터
 
+- ✅ **성능 분석 & 최적화** (1개 예제)
+  - Web Vitals 실시간 모니터링 (LCP, FID, CLS, FCP, TTFB)
+  - Lighthouse 성능 점수 시각화
+  - Bundle Analyzer 번들 크기 분석
+  - Performance API 활용
+  - 최적화 체크리스트
+
 ### 진행 중
 - 🔄 Design Token System 구축
 - 🔄 CLI Component Generator
